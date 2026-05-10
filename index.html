@@ -727,6 +727,35 @@ footer p{
     }
 
 }
+    .single-image-box{
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+    overflow:hidden;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.12);
+}
+
+.single-image-box img{
+    width:100%;
+    display:block;
+    object-fit:cover;
+    transition:0.4s;
+}
+
+.single-image-box:hover img{
+    transform:scale(1.03);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .single-image-box{
+        border-radius:18px;
+    }
+
+}
 </style>
 </head>
 
