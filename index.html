@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ramesth Agro | New Holland Authorised Dealer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<style>
+
+/* ================= RESET ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    max-width:100%;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f4f8ff;
+    color:#111;
+    overflow-x:hidden;
+    width:100%;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    background:linear-gradient(90deg,#ffcc00,#0057b8);
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+    transition:0.4s;
+}
+
+header.scrolled{
+    background:#003f88;
+}
+
+.navbar{
+    width:100%;
+    max-width:1400px;
+    margin:auto;
+    min-height:80px;
+    padding:14px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+/* ================= LOGO ================= */
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:white;
+}
+
+.logo i{
+    font-size:30px;
+}
+
+.logo-text{
+    line-height:1.2;
+}
+
+.logo h1{
+    font-size:26px;
+    font-weight:800;
+}
+
+.logo span{
+    font-size:11px;
+    letter-spacing:1px;
+    font-weight:500;
+}
+
+/* ================= NAV ================= */
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-size:15px;
+    font-weight:600;
+    transition:0.3s;
+    position:relative;
+}
+
+nav a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0%;
+    height:2px;
+    background:#ffcc00;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+nav a:hover{
+    color:#ffcc00;
+}
+
+/* ================= BUTTON ================= */
+
+.top-btn{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    background:white;
+    color:#0057b8;
+    padding:11px 20px;
+    border-radius:50px;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:700;
+    transition:0.3s;
+    white-space:nowrap;
+}
+
+.top-btn:hover{
+    background:#111;
+    color:white;
+    transform:translateY(-2px);
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    width:100%;
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)),
+    url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1600&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    padding:140px 20px 80px;
+}
+
+.hero-content{
+    width:100%;
+    max-width:900px;
+    margin:auto;
+    color:white;
+}
+
+.hero-content h2{
+    font-size:clamp(36px,7vw,68px);
+    line-height:1.15;
+    margin-bottom:20px;
+    font-weight:800;
+}
+
+.hero-content p{
+    font-size:clamp(15px,2vw,19px);
+    line-height:1.9;
+    margin-bottom:35px;
+}
+
+/* ================= HERO BUTTONS ================= */
+
+.hero-btns{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:14px 30px;
+    border-radius:50px;
+    text-decoration:none;
+    font-size:15px;
+    font-weight:700;
+    transition:0.3s;
+    display:inline-block;
+    text-align:center;
+}
+
+.btn-yellow{
+    background:#ffcc00;
+    color:#111;
+}
+
+.btn-yellow:hover{
+    background:white;
+    transform:translateY(-3px);
+}
+
+.btn-blue{
+    background:#0057b8;
+    color:white;
+}
+
+.btn-blue:hover{
+    background:#00306b;
+    transform:translateY(-3px);
+}
+
+/* ================= SECTION ================= */
+
+section{
+    width:100%;
+    padding:85px 20px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:55px;
+}
+
+.section-title h2{
+    font-size:clamp(30px,5vw,42px);
+    color:#0057b8;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    font-size:16px;
+    color:#666;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+    width:100%;
+    max-width:1300px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:50px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.about-content h3{
+    font-size:clamp(28px,5vw,36px);
+    color:#0057b8;
+    margin-bottom:20px;
+}
+
+.about-content p{
+    line-height:1.9;
+    color:#444;
+    margin-bottom:15px;
+}
+
+/* ================= FEATURES ================= */
+
+.features{
+    background:white;
+}
+
+.feature-grid{
+    width:100%;
+    max-width:1300px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.feature-box{
+    background:#f8fbff;
+    padding:35px 25px;
+    border-radius:20px;
+    text-align:center;
+    transition:0.4s;
+    border:2px solid transparent;
+}
+
+.feature-box:hover{
+    transform:translateY(-10px);
+    border-color:#ffcc00;
+}
+
+.feature-box i{
+    font-size:50px;
+    color:#0057b8;
+    margin-bottom:20px;
+}
+
+.feature-box h4{
+    font-size:22px;
+    margin-bottom:12px;
+}
+
+.feature-box p{
+    line-height:1.8;
+}
+
+/* ================= PRODUCT ================= */
+
+.product-section{
+    background:linear-gradient(135deg,#0057b8,#0076f0);
+    color:white;
+}
+
+.product-container{
+    width:100%;
+    max-width:1300px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:50px;
+    align-items:center;
+}
+
+.product-image img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.35);
+}
+
+.product-details h2{
+    font-size:clamp(30px,5vw,46px);
+    margin-bottom:20px;
+}
+
+.product-details p{
+    line-height:1.9;
+}
+
+.specs{
+    margin-top:25px;
+}
+
+.spec{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    background:rgba(255,255,255,0.12);
+    padding:15px 18px;
+    border-radius:12px;
+    margin-bottom:12px;
+}
+
+.spec span{
+    font-size:15px;
+    font-weight:600;
+}
+
+/* ================= PARTS ================= */
+
+.parts-grid{
+    width:100%;
+    max-width:1300px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:28px;
+}
+
+.part-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.part-card:hover{
+    transform:translateY(-10px);
+}
+
+.part-card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+}
+
+.part-content{
+    padding:22px;
+}
+
+.part-content h3{
+    color:#0057b8;
+    margin-bottom:10px;
+    font-size:22px;
+}
+
+.part-content p{
+    line-height:1.8;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+    background:
+    linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1500&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    text-align:center;
+    color:white;
+}
+
+.cta h2{
+    font-size:clamp(30px,5vw,46px);
+    margin-bottom:20px;
+}
+
+.cta p{
+    max-width:850px;
+    margin:auto;
+    line-height:1.9;
+    margin-bottom:35px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-box{
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+
+    background:white;
+    padding:50px;
+    border-radius:20px;
+    box-shadow:0 5px 25px rgba(0,0,0,0.08);
+    text-align:center;
+}
+
+.contact-box h3{
+    font-size:clamp(28px,5vw,36px);
+    color:#0057b8;
+    margin-bottom:20px;
+}
+
+.contact-info{
+    margin-top:35px;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.contact-item{
+    background:#f7faff;
+    padding:25px;
+    border-radius:18px;
+}
+
+.contact-item i{
+    font-size:34px;
+    color:#0057b8;
+    margin-bottom:15px;
+}
+
+.contact-item h4{
+    margin-bottom:8px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#001f45;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+footer p{
+    margin:6px 0;
+    font-size:14px;
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+
+    width:62px;
+    height:62px;
+
+    background:#25d366;
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+    text-decoration:none;
+    font-size:30px;
+
+    box-shadow:0 5px 18px rgba(0,0,0,0.3);
+
+    z-index:999;
+    transition:0.3s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.1);
+}
+
+/* ================= TABLET ================= */
+
+@media(max-width:950px){
+
+    .navbar{
+        flex-direction:column;
+        justify-content:center;
+        gap:15px;
+    }
+
+    nav{
+        justify-content:center;
+    }
+
+    .hero{
+        padding-top:220px;
+    }
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:600px){
+
+    .hero{
+        background-attachment:scroll;
+        padding-top:240px;
+        min-height:auto;
+    }
+
+    .cta{
+        background-attachment:scroll;
+    }
+
+    .navbar{
+        padding:12px 15px;
+    }
+
+    .logo{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .logo h1{
+        font-size:22px;
+    }
+
+    .logo span{
+        font-size:10px;
+    }
+
+    nav{
+        gap:12px;
+    }
+
+    nav a{
+        font-size:13px;
+    }
+
+    .top-btn{
+        width:100%;
+        justify-content:center;
+    }
+
+    .hero-content p{
+        line-height:1.7;
+    }
+
+    .btn{
+        width:100%;
+        max-width:280px;
+    }
+
+    .contact-box{
+        padding:30px 18px;
+    }
+
+    .part-card img{
+        height:200px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header id="header">
+
+<div class="navbar">
+
+<div class="logo">
+
+<i class="fa-solid fa-tractor"></i>
+
+<div class="logo-text">
+<h1>Ramesth Agro</h1>
+<span>NEW HOLLAND AUTHORISED DEALER</span>
+</div>
+
+</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#about">About</a>
+<a href="#harvester">Harvester</a>
+<a href="#parts">Parts</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<a href="https://wa.me/918821898979" class="top-btn">
+<i class="fa-brands fa-whatsapp"></i>
+WhatsApp
+</a>
+
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h2>
+NEW HOLLAND <br>
+TC5.30 HARVESTER
+</h2>
+
+<p>
+Premium Agricultural Machinery, Genuine Spare Parts,
+Advanced Harvesting Solutions & Complete Farming Support.
+</p>
+
+<div class="hero-btns">
+
+<a href="https://wa.me/918821898979" class="btn btn-yellow">
+Enquiry Now
+</a>
+
+<a href="#harvester" class="btn btn-blue">
+Explore Harvester
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="section-title">
+<h2>About Ramesth Agro</h2>
+<p>Trusted Dealer Of New Holland Agricultural Machinery</p>
+</div>
+
+<div class="about">
+
+<img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200&auto=format&fit=crop">
+
+<div class="about-content">
+
+<h3>Authorised New Holland Dealer</h3>
+
+<p>
+Ramesth Agro is a professional supplier of New Holland Harvesters,
+tractor parts and agricultural machinery solutions.
+</p>
+
+<p>
+We provide original spare parts, machine servicing,
+hydraulic systems, filters, electrical parts and harvesting equipment.
+</p>
+
+<p><b>Owner:</b> Manish Dewda</p>
+
+<a href="https://wa.me/918821898979" class="btn btn-yellow">
+Talk On WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="features">
+
+<div class="section-title">
+<h2>Why Choose Us</h2>
+<p>Professional Farming Equipment & Trusted Service</p>
+</div>
+
+<div class="feature-grid">
+
+<div class="feature-box">
+<i class="fa-solid fa-gears"></i>
+<h4>Genuine Parts</h4>
+<p>100% original New Holland spare parts with warranty support.</p>
+</div>
+
+<div class="feature-box">
+<i class="fa-solid fa-tractor"></i>
+<h4>Advanced Machinery</h4>
+<p>High performance harvesters with latest farming technology.</p>
+</div>
+
+<div class="feature-box">
+<i class="fa-solid fa-headset"></i>
+<h4>Customer Support</h4>
+<p>Quick support and expert guidance for all farming equipment.</p>
+</div>
+
+<div class="feature-box">
+<i class="fa-solid fa-shield"></i>
+<h4>Trusted Dealer</h4>
+<p>Reliable dealership with quality assurance and service.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- HARVESTER -->
+
+<section id="harvester" class="product-section">
+
+<div class="section-title">
+<h2 style="color:white;">New Holland TC5.30</h2>
+<p style="color:#ddd;">High Performance Combine Harvester</p>
+</div>
+
+<div class="product-container">
+
+<div class="product-image">
+<img src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?q=80&w=1200&auto=format&fit=crop">
+</div>
+
+<div class="product-details">
+
+<h2>TC5.30 Harvester</h2>
+
+<p>
+The New Holland TC5.30 Combine Harvester delivers
+high harvesting efficiency, excellent grain quality,
+powerful engine performance and advanced cutting technology.
+</p>
+
+<div class="specs">
+
+<div class="spec">
+<span>Engine Power</span>
+<span>130 HP+</span>
+</div>
+
+<div class="spec">
+<span>Fuel Efficient</span>
+<span>Yes</span>
+</div>
+
+<div class="spec">
+<span>Cutting System</span>
+<span>Advanced</span>
+</div>
+
+<div class="spec">
+<span>Threshing Capacity</span>
+<span>High Performance</span>
+</div>
+
+<div class="spec">
+<span>Technology</span>
+<span>Modern Farming</span>
+</div>
+
+</div>
+
+<br>
+
+<a href="https://wa.me/918821898979" class="btn btn-yellow">
+Get Price Details
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PARTS -->
+
+<section id="parts">
+
+<div class="section-title">
+<h2>New Holland Harvester Parts</h2>
+<p>Original Spare Parts & Agricultural Components</p>
+</div>
+
+<div class="parts-grid">
+
+<div class="part-card">
+<img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=1000&auto=format&fit=crop">
+<div class="part-content">
+<h3>Engine Parts</h3>
+<p>Premium quality engine components for powerful performance.</p>
+</div>
+</div>
+
+<div class="part-card">
+<img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1000&auto=format&fit=crop">
+<div class="part-content">
+<h3>Hydraulic Parts</h3>
+<p>Advanced hydraulic systems for smooth operation.</p>
+</div>
+</div>
+
+<div class="part-card">
+<img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1000&auto=format&fit=crop">
+<div class="part-content">
+<h3>Filters & Oils</h3>
+<p>Long life filters and lubricants for machine durability.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="section-title">
+<h2>Contact Us</h2>
+<p>Get In Touch With Ramesth Agro</p>
+</div>
+
+<div class="contact-box">
+
+<h3>Ramesth Agro</h3>
+
+<p>Authorised Dealer - New Holland</p>
+
+<div class="contact-info">
+
+<div class="contact-item">
+<i class="fa-brands fa-whatsapp"></i>
+<h4>WhatsApp</h4>
+<p>+91 88218 98979</p>
+</div>
+
+<div class="contact-item">
+<i class="fa-solid fa-user"></i>
+<h4>Owner</h4>
+<p>Manish Dewda</p>
+</div>
+
+<div class="contact-item">
+<i class="fa-solid fa-tractor"></i>
+<h4>Products</h4>
+<p>Harvesters & Spare Parts</p>
+</div>
+
+</div>
+
+<br><br>
+
+<a href="https://wa.me/918821898979" class="btn btn-blue">
+Chat Now
+</a>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2026 Ramesth Agro | All Rights Reserved</p>
+
+<p>New Holland Authorised Dealer</p>
+
+</footer>
+
+<!-- WHATSAPP -->
+
+<a href="https://wa.me/918821898979" class="whatsapp">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<!-- HEADER SCROLL -->
+
+<script>
+
+window.addEventListener("scroll", function(){
+
+    let header = document.getElementById("header");
+
+    if(window.scrollY > 50){
+        header.classList.add("scrolled");
+    }
+    else{
+        header.classList.remove("scrolled");
+    }
+
+});
+
+</script>
+
+</body>
+</html>
